@@ -1,11 +1,6 @@
 name: Self Build (Linux Server + macOS Desktop)
 
 on:
-  push:
-    branches:
-      - maintained
-    paths-ignore:
-      - "**.md"
   workflow_dispatch:
     inputs:
       version:
@@ -16,7 +11,7 @@ on:
       publish_release:
         description: "Publish GitHub Release on this fork"
         required: false
-        default: true
+        default: false
         type: boolean
 
 permissions:
